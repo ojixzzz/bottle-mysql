@@ -153,6 +153,7 @@ class MySQLPlugin(object):
 
             # Add the connection handle as a keyword argument.
             kwargs[keyword] = cur
+			kwargs['con'] = con
 
             try:
                 rv = callback(*args, **kwargs)
